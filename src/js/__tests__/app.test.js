@@ -1,6 +1,6 @@
 import Character from '../app.js';
 import Bowman from '../bowman.js';
-import Daemon from '../daemon.js';
+import Daemon from '../daemon.js'
 import Magician from '../magician.js';
 import Swordsman from '../swordsman.js';
 import Undead from '../undead.js';
@@ -25,9 +25,9 @@ test('New character with invalid character type', () => {
 });
 
 test('Inflict damage to character', () => {
-    const testCharacter = new Character('Bowy', 'Bowman', 25, 25);
-    testCharacter.damage(50);
-    expect(testCharacter).toEqual({
+    const testChar = new Character('Bowy', 'Bowman', 25, 25);
+    testChar.damage(50);
+    expect(testChar).toEqual({
         name: 'Bowy',
         type: 'Bowman',
         health: 62.5,
@@ -38,16 +38,16 @@ test('Inflict damage to character', () => {
 });
 
 test('The value of health cannot be negative', () => {
-    const testCharacter = new Character('Bowy', 'Bowman', 25, 25);
-    testCharacter.health = 0;
-    testCharacter.damage(50);
-    expect(testCharacter.health).toEqual(0);
+    const testChar = new Character('Bowy', 'Bowman', 25, 25);
+    testChar.health = 0;
+    testChar.damage(50);
+    expect(testChar.health).toEqual(0);
 });
 
 test('Go to the next level', () => {
-    const testCharacter = new Character('Bowy', 'Bowman', 25, 25);
-    testCharacter.levelUp();
-    expect(testCharacter).toEqual({
+    const testChar = new Character('Bowy', 'Bowman', 25, 25);
+    testChar.levelUp();
+    expect(testChar).toEqual({
         name: 'Bowy',
         type: 'Bowman',
         health: 100,
@@ -58,9 +58,9 @@ test('Go to the next level', () => {
 });
 
 test('Go to the next level with zero health', () => {
-    const testCharacter = new Character('Bowy', 'Bowman', 25, 25);
-    testCharacter.health = 0;
-    expect(() => testCharacter.levelUp()).toThrow(
+    const testChar = new Character('Bowy', 'Bowman', 25, 25);
+    testChar.health = 0;
+    expect(() => testChar.levelUp()).toThrow(
         'You cannot raise the level with zero health',
     );
 });
@@ -96,8 +96,8 @@ test('New Magician', () => {
         type: 'Magician',
         health: 100,
         level: 1,
-        attack: 10,
-        defence: 40,
+        attack: 40,
+        defence: 10,
     });
 });
 
@@ -120,8 +120,8 @@ test('New Undead', () => {
         type: 'Undead',
         health: 100,
         level: 1,
-        attack: 25,
-        defence: 25,
+        attack: 40,
+        defence: 10,
     });
 });
 

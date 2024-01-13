@@ -1,7 +1,7 @@
 import Character from './app.js';
 
-export default class Daemon extends Character {
+export default class Magician extends Character {
     constructor(name) {
-        super(name, 'Daemon', 10, 40);
+        super(name, 'Magician', 40, 10);
     }
 }
