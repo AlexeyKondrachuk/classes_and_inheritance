@@ -1,3 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/063k6joip5jtfok1?svg=true)](https://ci.appveyor.com/project/AlexeyKondrachuk/destructuring)
+[![Build status](https://ci.appveyor.com/api/projects/status/j4gkijyu7ewdwea7?svg=true)](https://ci.appveyor.com/project/AlexeyKondrachuk/classes-and-inheritance-x31u6)
 
-# Destructuring
+
+
+# Домашнее задание к лекции «Классы, наследование»git 
